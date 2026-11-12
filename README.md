@@ -6,6 +6,22 @@ Use Craft Reel with a coding agent to plan and author a film in the requested di
 
 The skill is model-independent: Codex, Claude Code, Antigravity, Qwen Code and environments powered by DeepSeek or other models can use its instructions if they can read files, write code and run the needed tools. A chat-only model cannot render a video by itself. Cross-agent end-to-end testing is pending.
 
+## معرفی فارسی
+
+**Craft Reel یک اسکیل قابل استفاده در دستیارهای کدنویسی هوش مصنوعی برای ساخت ویدیوهای موشن‌گرافیک بر اساس ایده، سبک مرجع و فایل‌های شماست.**
+
+می‌توانید موضوع، زبان فارسی یا انگلیسی یا ترکیبی، فونت، عکس، لوگو، فوتیج، موسیقی و نریشن دلخواه را مشخص کنید. دستیار باید بر اساس خواستهٔ شما سبک و مسیر ساخت مناسب را انتخاب کند؛ نمونهٔ فارسیِ همراه بسته فقط یکی از گزینه‌هاست و الگوی اجباری همهٔ ویدیوها نیست.
+
+- سبک‌های قابل برنامه‌ریزی شامل تایپوگرافی متحرک، مینیمال، اینفوگرافیک، معرفی محصول، کلاژ و ویدیوهای مبتنی بر فوتیج هستند.
+- امکان استفاده در Codex، Claude Code، Antigravity، Qwen Code و دیگر محیط‌های کدنویسی دارای دسترسی به فایل و اجرای ابزار وجود دارد؛ آزمون کامل همهٔ محیط‌ها هنوز انجام نشده است.
+- برای شروع، کل پوشهٔ اسکیل را نصب کنید و از دستیار بخواهید `SKILL.md` را بخواند. سپس ایده، نمونهٔ سبک، فایل‌ها، زبان، مدت و ابعاد خروجی را بدهید. مسیرهای نصب و وابستگی‌ها در بخش‌های انگلیسی همین صفحه آمده‌اند.
+- ابزار دوبعدیِ همراه بسته به‌صورت پیش‌فرض ۱۰۸۰×۱۹۲۰ و ۳۰ فریم است. قالب‌های دیگر و استفادهٔ قطعی از فوتیج به تنظیم و کد متناسب با پروژه نیاز دارند. سه‌بعدی واقعی و انیمیشن کاراکتر نیازمند ابزار مناسب‌اند و موتور آمادهٔ آن‌ها داخل بسته نیست.
+- فایل فونت تجاری، صدای گوینده و سرویس تولید نریشن همراه بسته ارائه نمی‌شود. اصل فایل‌های کاربر باید حفظ شود و استفاده از دارایی‌ها مطابق اجازهٔ صاحب اثر باشد.
+
+برای گزارش مشکل یا پیشنهاد بهبود، از [Issues](https://github.com/70thblackman/craft-reel/issues) استفاده کنید. برای مشارکت، روی نسخهٔ مستقل خودتان تغییر بدهید و Pull Request بفرستید؛ اعمال تغییر در مخزن اصلی به پذیرش نگه‌دارنده نیاز دارد.
+
+**ارتباط با سازنده:** [hamed1998gh@gmail.com](mailto:hamed1998gh@gmail.com) · [70thblackman](https://github.com/70thblackman)
+
 ## What v0.2 adds
 
 - A general brief → direction → route → production → QA workflow in `SKILL.md`.
@@ -156,5 +172,7 @@ The bundled renderer, engine, mix and QA scripts retain their defaults. Other di
 ## License and author
 
 Prepared for publication by **70thblackman** under the [MIT License](LICENSE). MIT permits reuse, modification and commercial use while requiring preservation of its copyright and license notice. External dependencies and user-supplied fonts, voices, logos and media retain their own terms. The publisher must have the right to license the included source.
+
+Contact: [hamed1998gh@gmail.com](mailto:hamed1998gh@gmail.com). For bugs and feature requests, open an [issue](https://github.com/70thblackman/craft-reel/issues); contributions can be proposed through pull requests.
 
 Installation references: [Codex](https://learn.chatgpt.com/docs/build-skills), [Claude Code](https://code.claude.com/docs/en/skills), [Antigravity](https://antigravity.google/docs/skills), [Qwen Code](https://github.com/QwenLM/qwen-code/blob/main/docs/users/features/skills.md). License reference: [MIT](https://choosealicense.com/licenses/mit/).
