@@ -1,8 +1,8 @@
 # Publish the first version
 
-Proposed repository: `70thblackman/craft-reel`. Proposed initial tag: `v0.2.0`.
+Repository: `70thblackman/craft-reel`. Release tag: `v0.2.0`.
 
-This package has not been published by the preparation process. The final public upload requires the author's approval.
+This publication was authorized by the author. The steps below also document how to publish a copy or a future version; do not recreate or overwrite an existing repository.
 
 Before release, confirm that you own or may publish the included scripts, SVG illustrations and instructions under MIT, and that `70thblackman` is the desired copyright attribution. Review the excluded-assets notes and the local review report supplied separately. Keep the original ZIP, private source paths, recordings and unrelated project files outside this repository.
 

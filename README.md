@@ -39,7 +39,7 @@ Keep the folder intact: copying only `SKILL.md` loses the engine, scripts and re
 
 `~` means your user directory. Older host versions may use different locations. Avoid installing duplicate copies with the same skill name. These are documented discovery conventions, not a claim of successful testing in every host.
 
-For example, after this repository is published, from your project root:
+From your project root, choose one installation location:
 
 ```sh
 # Codex / Antigravity project installation
@@ -52,7 +52,7 @@ git clone https://github.com/70thblackman/craft-reel.git .claude/skills/craft-re
 git clone https://github.com/70thblackman/craft-reel.git .qwen/skills/craft-reel
 ```
 
-The URL above is the proposed publication destination, not a currently verified live repository. To install from a ZIP now, extract it and copy its `craft-reel` folder to one of these locations. Refresh skills or restart your host if it does not appear.
+To install from a downloaded ZIP, extract it and copy its `craft-reel` folder to one of these locations. Refresh skills or restart your host if it does not appear.
 
 ### Universal prompt
 
