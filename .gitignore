@@ -1,0 +1,45 @@
+# Local secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+
+# Dependencies, environments and caches
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+
+# Generated video projects and renders
+/projects/
+/my-reel/
+/build/
+/out/
+/renders/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.zip
+*.log
+
+# Unverified font binaries and original raster asset paths
+*.ttf
+*.otf
+*.woff
+*.woff2
+/assets/starter/img/grain.png
+/assets/starter/img/paper.jpg
+
+# Editor and OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
