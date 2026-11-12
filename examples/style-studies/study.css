@@ -1,0 +1,22 @@
+/* These choices belong to these studies, not to the engine or every project. */
+#stage { font-family: Tahoma, Arial, sans-serif; }
+.vig::after { display: none; }
+#world { filter: none !important; }
+#fx .tear { display: none; }
+.study { position:absolute; inset:0; padding:120px 96px; box-sizing:border-box; }
+.study p, .study h1 { margin:0; }
+.eyebrow { position:absolute; top:150px; left:96px; right:96px; font:24px Arial,sans-serif; letter-spacing:4px; direction:ltr; }
+.minimal { background:#f4f1e9; color:#242820; text-align:center; direction:rtl; }
+.minimal .rule { position:absolute; top:455px; left:calc(50% - 1px); width:2px; height:180px; background:#a3874d; transform-origin:top; }
+.minimal h1 { position:absolute; top:760px; left:96px; right:96px; font-size:80px; font-weight:400; line-height:1.7; }
+.minimal .english { position:absolute; top:1050px; left:96px; right:96px; font:34px Arial,sans-serif; letter-spacing:1px; direction:ltr; }
+.minimal .note { position:absolute; top:1490px; left:96px; right:96px; font-size:25px; color:#666b5f; line-height:1.8; }
+.collage { background:#f4e7d0; color:#25231f; direction:ltr; }
+.collage .disk { position:absolute; top:360px; right:-100px; width:680px; height:680px; border-radius:50%; background:#ea6b4f; }
+.collage .photo { position:absolute; top:530px; left:130px; width:740px; height:680px; border:22px solid #fffdf6; box-shadow:0 18px 32px #332c2524; object-fit:cover; box-sizing:border-box; }
+.collage .tape { position:absolute; top:490px; left:350px; width:290px; height:80px; background:#ded17bbf; transform:rotate(-9deg); }
+.collage h1 { position:absolute; top:1240px; left:96px; width:830px; font:700 100px/.98 Arial,sans-serif; letter-spacing:-5px; }
+.collage .label { position:absolute; top:1570px; right:100px; padding:22px 30px; background:#536ba7; color:#fff; font:25px Arial,sans-serif; transform:rotate(3deg); }
+.collage .foot { position:absolute; top:1750px; left:96px; font:20px Arial,sans-serif; }
+
+.study > * { will-change: transform, opacity; }

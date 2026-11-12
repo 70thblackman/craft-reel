@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="900" viewBox="0 0 1000 900">
+<!-- Original geometric illustration for this example; licensed with the repository. -->
+<rect width="1000" height="900" fill="#b7ced0"/>
+<circle cx="740" cy="220" r="130" fill="#f7ddb1"/>
+<path d="M0 670L300 270 610 670Z" fill="#6a8880"/>
+<path d="M270 900L710 390 1120 900Z" fill="#405f68"/>
+<path d="M0 720Q230 600 510 780T1000 710V900H0Z" fill="#d99772"/>
+<path d="M0 860Q260 700 580 850T1000 800V900H0Z" fill="#ae7159"/>
+</svg>
