@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8">
+<title>reel cover</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* spotlight desk: bright where the props lie, falling off to deep accent */
+  .spot { position: absolute; inset: 0;
+    background: radial-gradient(70% 42% at 50% 58%, #2a9bff 0%, #0b6fd6 38%, #06386f 72%, #04172f 100%); }
+  .spot::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(35deg, rgba(255,255,255,.15) 0 1px, transparent 1px 4px); opacity: .14; mix-blend-mode: overlay; }
+  .spot::after { content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 2px, transparent 2px 108px),
+                repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 2px, transparent 2px 108px);
+    -webkit-mask: radial-gradient(60% 40% at 50% 58%, #000 30%, transparent 80%); }
+  .dof { filter: blur(7px) drop-shadow(0 30px 30px rgba(0,0,0,.4)); }
+</style>
+</head>
+<body>
+<!-- Cover, 1080x1920. Everything that matters stays inside the 3:4 profile crop (y 240-1680). -->
+<div id="stage">
+  <div id="world"></div>
+  <div id="cap"><div class="pill"></div></div>
+  <div id="fx"><div class="tear"></div><div class="flash"></div></div>
+</div>
+<script src="js/engine.js"></script>
+<script src="js/art.js"></script>
+<script src="js/art2.js"></script>
+<script>
+const C = mk(`<div class="scene"><div class="spot"></div></div>`);
+const put = (html, x, y, r = 0, cls = "shd", extra = "") => at(C, `<div class="a ${cls}" style="left:${x}px;top:${y}px;transform:rotate(${r}deg);${extra}">${html}</div>`);
+
+// out-of-focus props at the edges
+put(ART.coin(170), -40, 1470, -10, "dof");
+put(ART.pencil(520), 600, 1710, -18, "dof");
+put(ART.calc(230), 880, 620, 14, "dof");
+put(ART.coin(110), 60, 720, 20, "dof");
+
+// mid-ground: the salary envelope, notes already spent
+put(ART.note(360), 470, 960, -12);
+put(ART.note(360), 620, 1005, 8);
+put(ART.envelope(520, "حقوق ماه بعد"), 470, 1080, 3);
+put(ART.coin(120), 400, 1240, -8);
+put(ART.pin(64), 900, 1150, 12);
+
+// brand lockup slot: replace this block with the client logo
+at(C, `<div class="a" style="left:0;right:0;top:280px;display:flex;align-items:center;justify-content:center;gap:18px;color:#fff">
+  <div style="width:64px;height:64px;border-radius:18px;background:#fff;color:#008efa;display:flex;align-items:center;justify-content:center;font-weight:950;font-size:38px;line-height:1">ب</div>
+  <div class="hb" style="font-size:52px">برند شما</div></div>`);
+
+// headline with depth + sticker subline
+at(C, `<div class="a c" style="top:405px;font-weight:950;font-size:132px;line-height:1.25;color:#fff;white-space:nowrap;${ext("#04172f", 12)}">این ماه هم</div>`);
+at(C, `<div class="a c" style="top:580px;font-weight:950;font-size:166px;line-height:1.2;color:#fff;white-space:nowrap;${ext("#04172f", 14)}">دیر شد؟</div>`);
+at(C, `<div class="a c" style="top:820px"><span style="display:inline-block;padding:0 40px 16px;border-radius:26px;background:#fff;font-weight:950;font-size:54px;line-height:1.4;color:#008efa;white-space:nowrap;box-shadow:0 10px 0 #9fbfe0,0 28px 50px rgba(0,10,40,.45);transform:rotate(-2deg)">از حقوق بعدی خرج کردیم؟</span></div>`);
+
+// stat sticker, bottom-left, clear of the envelope
+at(C, `<div class="a" style="left:84px;top:1120px;transform:rotate(-4deg);text-align:center">
+  <div style="font-weight:950;font-size:142px;line-height:1.1;color:#fff;${ext("#04172f", 10)}">۴۲٪</div>
+  <div class="tag w" style="position:relative;display:inline-block;font-size:30px;margin-top:6px">آمار فرضی · نمونه</div></div>`);
+
+// footer line, under the grid crop
+at(C, `<div class="a c" style="top:1730px"><span class="b" style="display:inline-block;padding:6px 30px 12px;border-radius:999px;background:rgba(4,23,47,.6);color:#fff;font-size:34px;line-height:1.5">نمونهٔ نمایشی · آمار فرضی</span></div>`);
+</script>
+</body>
+</html>
