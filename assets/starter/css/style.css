@@ -1,0 +1,118 @@
+/* Public preview: system fonts. Configure a licensed Persian family as Y for production. */
+
+/* One accent, its deep shades, a cool paper white, one gold and one signal red. */
+:root {
+  --brand: #008efa;
+  --brand-2: #0a6fd8;
+  --brand-3: #0753a8;
+  --brand-deep: #06386f;
+  --navy: #0b1b33;
+  --ink: #101828;
+  --muted: #667085;
+  --sky: #e6f3ff;
+  --sky-2: #b9dcff;
+  --paper: #f3f5f8;
+  --gold: #ffc23d;
+  --signal: #ff4d4d;
+}
+
+html, body { margin: 0; background: #000; overflow: hidden; }
+#stage {
+  position: relative; width: 1080px; height: 1920px; overflow: hidden;
+  direction: rtl; font-family: Y, Tahoma, sans-serif; font-weight: 400; color: var(--ink);
+  letter-spacing: 0;
+}
+#world, #fx, #cap { position: absolute; inset: 0; }
+#fx, #cap { pointer-events: none; }
+#fx .tear { position: absolute; left: 0; right: 0; height: 0; background: rgba(255, 255, 255, .45); mix-blend-mode: overlay; }
+#fx .flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+#cap .pill {
+  position: absolute; left: 50%; top: 1530px; transform: translateX(-50%); max-width: 900px;
+  padding: 8px 30px 14px; border-radius: 18px; background: rgba(8, 22, 44, .66); color: #fff;
+  font-weight: 700; font-size: 38px; line-height: 1.6; text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .18); white-space: normal;
+}
+#cap .pill:empty { display: none; }
+#cap .pill b { color: #7cc4ff; font-weight: 800; }
+.a { position: absolute; }
+.hide { display: none !important; }
+.scene { position: absolute; inset: 0; overflow: hidden; }
+.cam { position: absolute; inset: 0; transform-origin: 50% 50%; }
+
+/* ---------- backgrounds ---------- */
+.bg-grid { background-color: #f6f9fd; }
+.bg-grid::before {
+  content: ""; position: absolute; inset: -40px;
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 142, 250, .34) 0 2px, transparent 2px 108px),
+    repeating-linear-gradient(0deg, rgba(0, 142, 250, .34) 0 2px, transparent 2px 108px),
+    repeating-linear-gradient(90deg, rgba(0, 142, 250, .12) 0 1px, transparent 1px 27px),
+    repeating-linear-gradient(0deg, rgba(0, 142, 250, .12) 0 1px, transparent 1px 27px);
+}
+.bg-paper { background: var(--paper); }
+.bg-desk { background: radial-gradient(110% 70% at 50% 42%, #1a8ff0 0%, #0a63c4 55%, #053b80 100%); color: #fff; }
+.bg-desk::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(35deg, rgba(255,255,255,.15) 0 1px, transparent 1px 4px); opacity: .16; mix-blend-mode: overlay; }
+.bg-navy { background: radial-gradient(100% 60% at 50% 40%, #12305a 0%, #0b1b33 60%, #050d1b 100%); color: #fff; }
+.bg-navy::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(35deg, rgba(255,255,255,.15) 0 1px, transparent 1px 4px); opacity: .1; mix-blend-mode: screen; }
+.bg-brand { background: var(--brand); color: #fff; }
+.bg-brand::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(35deg, rgba(255,255,255,.15) 0 1px, transparent 1px 4px); opacity: .08; mix-blend-mode: overlay; }
+.vig::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 80% at 50% 45%, rgba(0, 0, 0, 0) 55%, rgba(3, 20, 45, .32) 100%);
+}
+
+/* ---------- type: weights of one family ---------- */
+.h { font-weight: 950; line-height: 1.45; }
+.hb { font-weight: 900; line-height: 1.45; }
+.hx { font-weight: 800; line-height: 1.45; }
+.b { font-weight: 700; line-height: 1.5; }
+.md { font-weight: 500; line-height: 1.5; }
+.m { font-weight: 300; line-height: 1.6; }
+.lat { direction: ltr; unicode-bidi: isolate; }
+.c { left: 0; right: 0; text-align: center; }
+.brand { color: var(--brand); }
+.wh { color: #fff; }
+
+/* word masks */
+.wd { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .04em .3em; margin-bottom: -.3em; }
+.pop .wd { overflow: visible; }
+.wd > span { display: inline-block; transform-origin: 50% 60%; }
+
+svg { overflow: visible; }
+.sh { filter: drop-shadow(0 18px 22px rgba(3, 30, 70, .32)) drop-shadow(0 3px 4px rgba(3, 30, 70, .25)); }
+.shd { filter: drop-shadow(0 26px 34px rgba(0, 10, 30, .45)) drop-shadow(0 4px 6px rgba(0, 10, 30, .35)); }
+
+/* ---------- phone mockup ---------- */
+.phone {
+  position: absolute; border-radius: 74px; background: #0f1520; box-sizing: border-box; padding: 16px;
+  box-shadow: 0 50px 90px rgba(0, 20, 50, .4), 0 0 0 3px #2a3342 inset;
+}
+.phone .scr { position: relative; width: 100%; height: 100%; border-radius: 60px; overflow: hidden; background: #fff; direction: rtl; }
+.phone .isl { position: absolute; left: 50%; top: 18px; width: 130px; height: 36px; margin-left: -65px; border-radius: 20px; background: #0f1520; z-index: 5; }
+
+/* ---------- paper, stickers, tags ---------- */
+.card { position: absolute; background: #fff; border-radius: 22px; box-shadow: 0 20px 40px rgba(3, 30, 70, .22), 0 2px 4px rgba(3, 30, 70, .12); }
+.sticky {
+  position: absolute; padding: 18px 26px 26px; background: #fff7c9; color: #3b3300; font-weight: 800; line-height: 1.45;
+  box-shadow: 0 16px 26px rgba(0, 0, 0, .2); border-radius: 4px;
+}
+.tag {
+  position: absolute; padding: 4px 22px 10px; border-radius: 999px; background: var(--brand); color: #fff;
+  font-weight: 900; line-height: 1.5; white-space: nowrap;
+  box-shadow: 0 6px 0 var(--brand-3), 0 14px 24px rgba(0, 60, 140, .3);
+}
+.tag.w { background: #fff; color: var(--brand); box-shadow: 0 6px 0 #b9cde3, 0 14px 24px rgba(0, 30, 70, .25); }
+.chip {
+  position: absolute; padding: 2px 16px 8px; border-radius: 12px; background: var(--sky); color: var(--brand-2);
+  font-weight: 800; line-height: 1.5; white-space: nowrap;
+}
+.stamp {
+  position: absolute; padding: 6px 40px 18px; border: 10px solid currentColor; border-radius: 22px;
+  font-weight: 950; line-height: 1.4; white-space: nowrap; color: var(--brand); mix-blend-mode: multiply;
+}
+
+/* subtle film grain over everything (optional, applied to #stage in QA renders) */
+.grain::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(35deg, rgba(255,255,255,.15) 0 1px, transparent 1px 4px); opacity: .06; mix-blend-mode: overlay;
+}
